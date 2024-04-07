@@ -1,12 +1,11 @@
 set(FURIE_HEADER "${project_SOURCE_DIR}/include/fft/furie.h")
-# set(FURIE_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/include/fft/furie.h")
 
 
 add_library(fft fft/furie.cpp ${FURIE_HEADER})
 
-target_include_directories(fft PUBLIC ../include) 
-# target_include_directories(fft PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
+target_include_directories(fft PUBLIC ../lib-src/libsndfile/include/sndfile.h)
+# https://github.com/LibraryOfCongress/ADCTest/blob/master/lib-src/libsndfile/include/sndfile.h
+# https://github.com/fmtlib/fmt/blob/master/include/fmt/format.h
  
 include(FetchContent)
 FetchContent_Declare(fft_lib GIT_REPOSITORY https://github.com/LibraryOfCongress/ADCTest.git)

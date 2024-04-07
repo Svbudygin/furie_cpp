@@ -1,5 +1,6 @@
 #include <iostream>
-#include "sndfile.h"
+#include <cmath>
+#include <sndfile.h>
 // https://github.com/LibraryOfCongress/ADCTest/blob/master/lib-src/libsndfile/include/sndfile.h
 // https://github.com/fmtlib/fmt/blob/master/include/fmt/format.h
 const double TwoPi = 6.283185307179586;
@@ -7,7 +8,6 @@ const double TwoPi = 6.283185307179586;
 // AVal - массив анализируемых данных, Nvl - длина массива должна быть кратна степени 2.
 // FTvl - массив полученных значений, Nft - длина массива должна быть равна Nvl.
 
-const double TwoPi = 6.283185307179586;
 
 void FFTAnalysis(double* AVal, double* FTvl, int Nvl, int Nft)
 {
@@ -108,7 +108,7 @@ void processAudioFile(const char* filename) {
     }
 
     int samples = info.frames * info.channels;
-    float *audio_data = new float[samples];
+    double *audio_data = new double[samples];
     sf_read_float(file, audio_data, samples);
     
     int Nvl = samples;

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/sergeybudygin/furie_cpp/build/apps",
+  "command": "/usr/bin/clang++  -I/Users/sergeybudygin/furie_cpp/src/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -o CMakeFiles/project.dir/main.cpp.o -c /Users/sergeybudygin/furie_cpp/apps/main.cpp",
+  "file": "/Users/sergeybudygin/furie_cpp/apps/main.cpp",
+  "output": "apps/CMakeFiles/project.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/sergeybudygin/furie_cpp/build/src",
+  "command": "/usr/bin/clang++  -I/Users/sergeybudygin/furie_cpp/src/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -o CMakeFiles/fft.dir/fft/furie.cpp.o -c /Users/sergeybudygin/furie_cpp/src/fft/furie.cpp",
+  "file": "/Users/sergeybudygin/furie_cpp/src/fft/furie.cpp",
+  "output": "src/CMakeFiles/fft.dir/fft/furie.cpp.o"
+}
+]

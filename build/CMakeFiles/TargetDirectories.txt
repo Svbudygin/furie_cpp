@@ -1,0 +1,8 @@
+/Users/sergeybudygin/furie_cpp/build/CMakeFiles/edit_cache.dir
+/Users/sergeybudygin/furie_cpp/build/CMakeFiles/rebuild_cache.dir
+/Users/sergeybudygin/furie_cpp/build/apps/CMakeFiles/project.dir
+/Users/sergeybudygin/furie_cpp/build/apps/CMakeFiles/edit_cache.dir
+/Users/sergeybudygin/furie_cpp/build/apps/CMakeFiles/rebuild_cache.dir
+/Users/sergeybudygin/furie_cpp/build/src/CMakeFiles/fft.dir
+/Users/sergeybudygin/furie_cpp/build/src/CMakeFiles/edit_cache.dir
+/Users/sergeybudygin/furie_cpp/build/src/CMakeFiles/rebuild_cache.dir

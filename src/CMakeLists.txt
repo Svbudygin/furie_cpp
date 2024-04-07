@@ -41,6 +41,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(fft)
 
+
 set(CMAKE_CXX_STANDARD 11)
 
 # Добавляем библиотеку fft
@@ -61,3 +62,11 @@ FetchContent_MakeAvailable(libsndfile)
 # Связываем вашу библиотеку с библиотекой libsndfile
 target_link_libraries(fft PUBLIC sndfile)
 
+# target_include_directories(fft PUBLIC ../lib-src/libsndfile/include)
+# # https://github.com/LibraryOfCongress/ADCTest/blob/master/lib-src/libsndfile/include/sndfile.h
+# # https://github.com/fmtlib/fmt/blob/master/include/fmt/format.h
+ 
+# include(FetchContent)
+# FetchContent_Declare(fft GIT_REPOSITORY https://github.com/LibraryOfCongress/ADCTest.git)
+# FetchContent_MakeAvailable(fft)
+# target_link_libraries(fft PUBLIC fft::sndfile)

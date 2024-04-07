@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfft.a CMakeFiles/fft.dir/fft/furie.cpp.o
+/usr/bin/ranlib libfft.a

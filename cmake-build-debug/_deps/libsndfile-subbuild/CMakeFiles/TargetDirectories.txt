@@ -1,0 +1,3 @@
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/libsndfile-populate.dir
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/edit_cache.dir
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/rebuild_cache.dir

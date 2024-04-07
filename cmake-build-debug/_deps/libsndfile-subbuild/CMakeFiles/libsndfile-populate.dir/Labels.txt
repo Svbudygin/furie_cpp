@@ -1,0 +1,14 @@
+# Target labels
+ libsndfile-populate
+# Source files and their labels
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/libsndfile-populate
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/libsndfile-populate.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/CMakeFiles/libsndfile-populate-complete.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-build.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-configure.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-download.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-install.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-mkdir.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-patch.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-test.rule
+D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libsndfile-subbuild/libsndfile-populate-prefix/src/libsndfile-populate-stamp/libsndfile-populate-update.rule

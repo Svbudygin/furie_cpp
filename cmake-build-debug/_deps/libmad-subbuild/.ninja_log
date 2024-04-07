@@ -1,0 +1,21 @@
+# ninja log v5
+0	94	7341955975834363	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-mkdir	6aee367b2d4136ad
+0	94	7341955975834363	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-mkdir	6aee367b2d4136ad
+95	2489	7341955999795946	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-download	bfb1812d0df5696e
+95	2489	7341955999795946	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-download	bfb1812d0df5696e
+2489	5423	0	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-update	7e42e7d53a790a8f
+2489	5423	0	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-update	7e42e7d53a790a8f
+5424	5628	7341956031167876	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-patch	b2d9ce753db8e06b
+5424	5628	7341956031167876	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-patch	b2d9ce753db8e06b
+5628	5725	7341956032142941	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-configure	5baa89413a0e2c70
+5628	5725	7341956032142941	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-configure	5baa89413a0e2c70
+5725	5822	7341956033105381	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-build	c06b0b35029ca39b
+5725	5822	7341956033105381	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-build	c06b0b35029ca39b
+5822	5915	7341956034023205	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-install	5738dc65b389151
+5822	5915	7341956034023205	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-install	5738dc65b389151
+5915	6007	7341956034971426	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-test	7fb8f40b54d2cad7
+5915	6007	7341956034971426	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-test	7fb8f40b54d2cad7
+6007	6286	7341956036864352	CMakeFiles/libmad-populate-complete	a9eb323f8f27c8a5
+6007	6286	7341956036864352	libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-done	a9eb323f8f27c8a5
+6007	6286	7341956036864352	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/CMakeFiles/libmad-populate-complete	a9eb323f8f27c8a5
+6007	6286	7341956036864352	D:/studying/prog/furie_cpp/furie_cpp/cmake-build-debug/_deps/libmad-subbuild/libmad-populate-prefix/src/libmad-populate-stamp/libmad-populate-done	a9eb323f8f27c8a5

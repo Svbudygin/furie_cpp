@@ -38,17 +38,16 @@
 ## Связываем вашу библиотеку с библиотекой fft_lib
 #target_link_libraries(fft PUBLIC fft_lib)
 #
-cmake_minimum_required(VERSION 3.10)
-project(fft)
 
 
-set(CMAKE_CXX_STANDARD 11)
+
+set(FURIE_HEADER "${project_SOURCE_DIR}/include/fft/furie.h")
 
 # Добавляем библиотеку fft
-add_library(fft fft/furie.cpp)
+add_library(fft fft/furie.cpp ${FURIE_HEADER})
 
 # Указываем публичный путь включения для вашей библиотеки
-target_include_directories(fft PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(fft PUBLIC ../include)
 
 # Включаем библиотеку libsndfile из GitHub
 include(FetchContent)

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <sndfile.h>
+#include <vector>
 // https://github.com/LibraryOfCongress/ADCTest/blob/master/lib-src/libsndfile/include/sndfile.h
 // https://github.com/fmtlib/fmt/blob/master/include/fmt/format.h
 
@@ -8,44 +9,18 @@ const double TwoPi = 6.283185307179586;
 
 void FFTAnalysis(double *AVal, double *FTvl, int Nvl, int Nft);
 
-void processAudioFile(const char *filename);
+void processAudioFile(std::string path);
 
-int main()
-{
-    const char *filename = "audio.wav";
-    std::cout << filename << std::endl;
-    processAudioFile(filename);
+//int main()
+//{
+//    std::string filename = "../songs/GSPD-RUSSIA_HAS_3_PATHS.mp3";
+//    std::cout << filename << std::endl;
+//    processAudioFile(filename);
+//
+//    return 0;
+//}
 
-    return 0;
-}
 
-void processAudioFile(const char *filename)
-{
-    SNDFILE *file;
-    SF_INFO info;
-
-    file = sf_open(filename, SFM_READ, &info);
-    if (!file)
-    {
-        std::cerr << "Error opening the file" << std::endl;
-        return;
-    }
-
-    int samples = info.frames * info.channels;
-    float *audio_data = new float[samples];
-    sf_read_float(file, audio_data, samples);
-
-    int Nvl = samples;
-    int Nft = Nvl;
-    double *FTvl = new double[Nft];
-
-    // Вызываем функцию FFTAnalysis для преобразования звукового файла в спектральное представление
-    FFTAnalysis(audio_data, FTvl, Nvl, Nft);
-
-    delete[] audio_data;
-    delete[] FTvl;
-    sf_close(file);
-}
 
 // AVal - массив анализируемых данных, Nvl - длина массива должна быть кратна степени 2.
 // FTvl - массив полученных значений, Nft - длина массива должна быть равна Nvl.
@@ -136,6 +111,43 @@ void FFTAnalysis(double* AVal, double* FTvl, int Nvl, int Nft)
 
     delete[] Tmvl;
 }
+
+
+void processAudioFile(std::string path) {
+    // Открываем аудиофайл для чтения
+    const char* filename = path.c_str();
+    filename = "D:/studying/prog/furie_cpp/furie_cpp/songs/GSPD-RUSSIA_HAS_3_PATHS.mp3";
+    SF_INFO info;
+    SNDFILE* file = sf_open(filename, SFM_READ, &info);
+    if (!file) {
+        std::cerr << "Error opening the file" << std::endl;
+
+    }
+
+    // Размер блока данных для чтения (например, каждый блок будет содержать 1 секунду аудио)
+    const int block_size = info.samplerate; // 1 секунда
+
+    // Буфер для чтения данных из файла
+    std::vector<float> buffer(block_size * info.channels);
+
+    // Читаем данные из файла и разбиваем их на отрезки
+    while (true) {
+        // Читаем блок данных из файла
+        sf_count_t read_count = sf_readf_float(file, buffer.data(), block_size);
+        if (read_count <= 0) {
+            // Если больше данных не осталось, выходим из цикла
+            break;
+        }
+
+        // Обработка блока данных
+        // Например, здесь можно обработать блок данных или сохранить его в отдельный файл
+
+        // Выводим информацию о размере блока
+        std::cout << "Read block of size: " << read_count << " samples" << std::endl;
+    }
+
+    // Закрываем файл
+    sf_close(file);
 
 
 }

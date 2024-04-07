@@ -1,20 +1,56 @@
 #include <iostream>
-#include "sndfile.h"
-// https://github.com/LibraryOfCongress/ADCTest/blob/master/lib-src/libsndfile/include/sndfile.h
-// https://github.com/fmtlib/fmt/blob/master/include/fmt/format.h
+#include "/Users/sergeybudygin/furie_cpp-2/include/fft/furie.h"
 const double TwoPi = 6.283185307179586;
+
+void FFTAnalysis(double *AVal, double *FTvl, int Nvl, int Nft);
+
+void processAudioFile(const char *filename);
+
+int main()
+{
+    const char *filename = "audio.wav";
+    std::cout << filename << std::endl;
+    processAudioFile(filename);
+
+    return 0;
+}
+
+void processAudioFile(const char *filename)
+{
+    SNDFILE *file;
+    SF_INFO info;
+
+    file = sf_open(filename, SFM_READ, &info);
+    if (!file)
+    {
+        std::cerr << "Error opening the file" << std::endl;
+        return;
+    }
+
+    int samples = info.frames * info.channels;
+    float *audio_data = new float[samples];
+    sf_read_float(file, audio_data, samples);
+
+    int Nvl = samples;
+    int Nft = Nvl;
+    double *FTvl = new double[Nft];
+
+    // Вызываем функцию FFTAnalysis для преобразования звукового файла в спектральное представление
+    FFTAnalysis(audio_data, FTvl, Nvl, Nft);
+
+    delete[] audio_data;
+    delete[] FTvl;
+    sf_close(file);
+}
 
 // AVal - массив анализируемых данных, Nvl - длина массива должна быть кратна степени 2.
 // FTvl - массив полученных значений, Nft - длина массива должна быть равна Nvl.
-
-const double TwoPi = 6.283185307179586;
-
-void FFTAnalysis(double* AVal, double* FTvl, int Nvl, int Nft)
+void FFTAnalysis(double *AVal, double *FTvl, int Nvl, int Nft)
 {
     int i, j, n, m, Mmax, Istp;
     double Tmpr, Tmpi, Wtmp, Theta;
     double Wpr, Wpi, Wr, Wi;
-    double* Tmvl;
+    double *Tmvl;
 
     n = Nvl * 2;
     Tmvl = new double[n];
@@ -93,41 +129,4 @@ void FFTAnalysis(double* AVal, double* FTvl, int Nvl, int Nft)
     }
 
     delete[] Tmvl;
-}
-
-
-
-void processAudioFile(const char* filename) {
-    SNDFILE *file;
-    SF_INFO info;
-
-    file = sf_open(filename, SFM_READ, &info);
-    if (!file) {
-        std::cerr << "Error opening the file" << std::endl;
-        return;
-    }
-
-    int samples = info.frames * info.channels;
-    float *audio_data = new float[samples];
-    sf_read_float(file, audio_data, samples);
-    
-    int Nvl = samples;
-    int Nft = Nvl;
-    double *FTvl = new double[Nft];
-
-    // Вызываем функцию FFTAnalysis для преобразования звукового файла в спектральное представление
-    FFTAnalysis(audio_data, FTvl, Nvl, Nft);
-
-    
-    delete[] audio_data;
-    delete[] FTvl;
-    sf_close(file);
-}
-
-int main() {
-    const char *filename = "audio.wav";
-    std::cout << filename << std::endl;
-    processAudioFile(filename);
-
-    return 0;
 }

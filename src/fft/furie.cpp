@@ -31,10 +31,25 @@ std::vector<float> fourierTransform(const std::vector<float>& samples) {
 }
 
 
+std::vector<float> localMaxSearch (const std::vector<float>& spectrogram){
+    std::vector<float> localMax;
+    if (spectrogram[0] > spectrogram[1]){
+        localMax.push_back(spectrogram[0]);
+    }
+    if (spectrogram[spectrogram.size()-1] > spectrogram[spectrogram.size()-2]){
+        localMax.push_back(spectrogram[spectrogram.size()-1]);
+    }
+    for (int i = 1; i < spectrogram.size()-1; ++i ){
+        if ( spectrogram[i] > spectrogram[i+1] && spectrogram[i] > spectrogram[i-1]){
+                localMax.push_back(spectrogram[i]);
+        } 
+    }
+
+}
 
 
 
-void processAudioFile(std::string path) { // Считываем аудиофайл
+std::vector<float> processAudioFile(std::string path) { // Считываем аудиофайл
     AudioFile<float> audio;
 
     if (!audio.load(path)) {
@@ -68,10 +83,11 @@ void processAudioFile(std::string path) { // Считываем аудиофай
 
 // Выводим количество сегментов
     std::cout << "Количество сегментов: " << numSegments << std::endl;
-    std::vector<float> furieVector;
+    std::vector<float> furieVector = {1,2,5,6,3,8};
+    std::vector<float> localMax;
     furieVector = fourierTransform(segments);
-    std::cout<<furieVector[1];
-// Здесь вы можете использовать каждый сегмент для анализа или обработки
+    localMax = localMaxSearch(furieVector);
 
-    return ;
+    return localMax;
 }
+
